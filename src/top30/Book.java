@@ -6,13 +6,14 @@ package top30;
         int id;
         String title;
         String author;
+        int authorId;
         String genre;
         double price;
         double rating;
         int pages;
         int publishedYear;
 
-        public Book(int id, String title, String author, String genre, double price, double rating, int pages, int publishedYear) {
+        public Book(int id, String title, String author, String genre, double price, double rating, int pages, int publishedYear, int authorId) {
             this.id = id;
             this.title = title;
             this.author = author;
@@ -21,6 +22,7 @@ package top30;
             this.rating = rating;
             this.pages = pages;
             this.publishedYear = publishedYear;
+            this.authorId = authorId;
         }
 
         public int getId() {
@@ -87,12 +89,15 @@ package top30;
             this.publishedYear = publishedYear;
         }
 
+        public int getAuthorId() {
+            return authorId;
+        }
+
         @Override
         public String toString() {
             return String.format("Book{id=%d, title='%s', author='%s', genre='%s', price=%.2f, rating=%.1f, pages=%d, publishedYear=%d}",
                     id, title, author, genre, price, rating, pages, publishedYear);
         }
-
 
     }
 
